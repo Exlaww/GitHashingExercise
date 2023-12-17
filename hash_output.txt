@@ -1,0 +1,2 @@
+Input: 0078
+Hash Output (SHA-256): 9a1f384cc7295093d7f0df6aeb93800300eaaecb8466cd2ee1d20f7402c7228e

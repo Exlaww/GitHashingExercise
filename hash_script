@@ -1,0 +1,21 @@
+# Check if exactly one argument is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <4-digit integer>"
+    exit 1
+fi
+
+# Validate if the input is a 4-digit integer
+if ! [[ $1 =~ ^[0-9]{4}$ ]]; then
+    echo "Error: Please provide a valid 4-digit integer."
+    exit 1
+fi
+
+# Input 4-digit integer
+input_integer="$1"
+
+# Hash the input using SHA-256 and save the output to hash_output.txt
+hash_output=$(echo -n "$input_integer" | sha256sum | cut -d ' ' -f 1)
+echo "Input: $input_integer" > hash_output.txt
+echo "Hash Output (SHA-256): $hash_output" >> hash_output.txt
+
+echo "Hash generated and saved in hash_output.txt."
