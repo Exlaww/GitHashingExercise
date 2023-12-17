@@ -4,4 +4,3 @@ Use Git commands to add and commit hash_script and hash_output.txt to your local
 
 In this case:
 AEM: 10078
-Repository: https://github.com/Exlaww/GitHashingExercise
